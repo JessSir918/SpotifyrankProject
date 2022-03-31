@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify audio ranking info</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+</head>
+
+<body>
+    <img src="{{ url_for('static', filename= 'img/spotifylogo.jpeg') }}" alt="spotify logo" />
+    <h1 class="header">Audio Ranker</h1>
+    <h3>Here are the steps on getting the song's url :)</h3>
+    <img src="{{ url_for('static', filename= 'img/instruction1.png') }}" alt="instruction1" 
+    class="instructions"/>
+    <img src="{{ url_for('static', filename= 'img/instruction2.png') }}" alt="instruction2" 
+    class="instructions"/>
+    <img src="{{ url_for('static', filename= 'img/instruction3.png') }}" alt="instruction3" 
+    class="instructions"/>
+    <a href="{{url_for('index')}}">Home</a>
+</body>
+
+</html>

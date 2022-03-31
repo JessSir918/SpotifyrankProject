@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify audio ranking</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+</head>
+<body>
+    <img src="{{ url_for('static', filename= 'img/spotifylogo.jpeg') }}" alt="spotify logo" />
+    <h1 class="header">Audio Ranker</h1>
+    {% for message in get_flashed_messages() %}
+        <div class="alert alert-danger">{{ message }}</div>
+    {% endfor %}
+    <!--  getting the url-->
+    <form method="post">
+        <label for="urlInput" class="urlInput">Enter song's url</label>
+        <input type="text" name ="urlInput" class="urlInput" placeholder="https://open.spotify.com/track/7cL7nEUihtqIbunMdOUaoA?si=201984d29e4241a5" value="{{ request.form['urlInput'] }}">
+        <!-- <input type="submit" value="submit please"> -->
+    </form>
+    <!-- navigation to help with getting url-->
+    <a href="{{url_for('info')}}">Click for help with finding song url </a>
+    <br />
+    <br />
+    <br />
+    <br />
+    <!--  danceability progression bar -->
+    <div class="progress">
+        <progress value="{{ post['danceability'] }}" max="1" />
+    </div>
+    <p>Your song has a danceability ranking of {{ post['danceability'] }}/1</p>
+    <!--  valence progression bar -->
+    <div class="progress">
+        <progress value="{{ post['valence'] }}" max="1" />
+    </div>
+    <p>Your song has a valence ranking of {{ post['valence'] }}/1</p>
+    <!--  energy progression bar -->
+    <div class="progress">
+        <progress value="{{ post['energy'] }}" max="1" />
+    </div>
+    <p>Your song has a energy ranking of {{ post['energy'] }}/1</p>
+    <!--  tempo progression bar -->
+    <div class="progress">
+        <progress value="{{ post['tempo'] }}" max="300" />
+    </div>
+    <p>Your song has a tempo ranking of {{ post['tempo'] }}/300</p>
+    <!--  loudness progression bar -->
+    <div class="progress">
+        <progress value="{{ post['loudness'] }}" max="60" />
+    </div>
+    <p>Your song has a loudness ranking of {{ post['loudness'] }}/60</p>
+    <!--  speechiness progression bar -->
+    <div class="progress">
+        <progress value="{{ post['speechiness'] }}" max="1" />
+    </div>
+    <p>Your song has a speechiness ranking of {{ post['speechiness'] }}/1</p>
+    <!--  instrumentalness progression bar -->
+    <div class="progress">
+        <progress value="{{ post['instrumentalness'] }}" max="1" />
+    </div>
+    <p>Your song has a instrumentalness ranking of {{ post['instrumentalness'] }}/1</p>
+    <!--  liveness progression bar -->
+    <div class="progress">
+        <progress value="{{ post['liveness'] }}" max="1" />
+    </div>
+    <p>Your song has a liveness ranking of {{ post['liveness'] }}/1</p>
+    <!--  acousticness progression bar -->
+    <div class="progress">
+        <progress value="{{ post['acousticness'] }}" max="1" />
+    </div>
+    <p>Your song has a acousticness ranking of {{ post['acousticness'] }}/1</p>
+</body>
+</html>
