@@ -1,4 +1,10 @@
 # SpotifyrankProject
+
+This project is designed to take in a song, and visualize how Spotify ranks the audio features of that song. This project was made with the help of the SpotifyWebAPI, so the input needs to be a Spotify URL of the song. This was a quick project done in under a week, as a way to apply what I had learned outside and inside my classes, and I also learned a lot of new things.
+
+
+
+
 To run the project you will need to set up a couple enviroment variables beforehand.
 
 1)FLASK_APP='app', which will tell Flask what file to run.
