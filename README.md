@@ -7,7 +7,7 @@ This project is designed to take in a song, and visualize how Spotify ranks the 
 
 To run the project you will need to set up a couple enviroment variables beforehand.
 
-1)FLASK_APP='app', which will tell Flask what file to run.
+1)FLASK_APP='app', which will tell Flask what python file to run.
 
 2)FLASK_ENV='development', which will tell Flask what mode to run on.
 
@@ -17,4 +17,6 @@ To run the project you will need to set up a couple enviroment variables beforeh
 
 5)SPOTIPY_CLIENT_SECRET='3cff1234c4454f669addc3daf116cf0c', which is also used for the SpotifyAPI.
 
-To get the information for the SpotifyAPI follow these steps:https://developer.spotify.com/documentation/general/guides/authorization/app-settings/
+(The information for the enviromental variables are all examples, so one will need to provide one's personal information for it to work.)
+
+To get the information for the SpotifyAPI client_id and client_secret follow these steps:https://developer.spotify.com/documentation/general/guides/authorization/app-settings/
