@@ -17,6 +17,6 @@ To run the project you will need to set up a couple enviroment variables beforeh
 
 5)SPOTIPY_CLIENT_SECRET='3cff1234c4454f669addc3daf116cf0c', which is also used for the SpotifyAPI.
 
-(The information for the enviromental variables are all examples, so one will need to provide one's personal information for it to work.)
+(The information for the enviroment variables are all examples, so one will need to provide one's personal information for it to work.)
 
 To get the information for the SpotifyAPI client_id and client_secret follow these steps:https://developer.spotify.com/documentation/general/guides/authorization/app-settings/
